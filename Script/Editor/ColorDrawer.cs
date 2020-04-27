@@ -69,7 +69,7 @@ namespace Yorozu.CustomProperty
 					for (var i = 0; i < ColorMax; i++)
 						_color[i] = _rgba[i].floatValue;
 
-					_colorStr = EditorGUI.DelayedTextField(position, "HTML Color Code",
+					_colorStr = EditorGUI.DelayedTextField(position, "Color Code",
 						ColorUtility.ToHtmlStringRGB(_color));
 					if (check.changed)
 						if (ColorUtility.TryParseHtmlString("#" + _colorStr, out var color))
