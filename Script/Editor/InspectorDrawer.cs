@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 namespace Yorozu.CustomProperty
 {
-	[CustomPropertyDrawer(typeof(InspectorAttribute))]
-	[CustomPropertyDrawer(typeof(Text))]
 	[CustomPropertyDrawer(typeof(Image))]
 	public class InspectorDrawer : PropertyDrawer
 	{
