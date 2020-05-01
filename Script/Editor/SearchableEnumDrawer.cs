@@ -15,7 +15,6 @@ namespace Yorozu.CustomProperty
 			if (property.type != "Enum")
 			{
 				EditorGUI.PropertyField(position, property, label);
-
 				return;
 			}
 
@@ -41,7 +40,7 @@ namespace Yorozu.CustomProperty
 			
 			public Popup(SerializedProperty property)
 			{
-				_height = GetHeight(property);
+				_height = GetHeight();
 
 				_treeView = new PopupTreeView(new TreeViewState(), this, property);
 				_searchField = new SearchField();
@@ -64,7 +63,7 @@ namespace Yorozu.CustomProperty
 				return new Vector2(200f, _height);
 			}
 
-			private static float GetHeight(SerializedProperty property)
+			private static float GetHeight()
 			{
 				return 8 * EditorGUIUtility.singleLineHeight;
 			}
