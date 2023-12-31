@@ -15,7 +15,7 @@ namespace Yorozu.CustomProperty
 				return;
 			}
 
-			var rect = new Rect(position); 
+			var rect = new Rect(position);
 			rect.width -= 20;
 			EditorGUI.PropertyField(rect, property, label);
 			rect.x += rect.width;
@@ -23,17 +23,17 @@ namespace Yorozu.CustomProperty
 
 			if (_texture == null)
 				_texture = (Texture2D) EditorGUIUtility.Load("UnityEditor.InspectorWindow");
-			
+
 			if (GUI.Button(rect, _texture, GUI.skin.label))
 				PopupWindow.Show(position, new Popup(property, position.width));
 		}
-		
+
 		private class Popup : PopupWindowContent
 		{
 			private readonly Editor _cacheEditor;
 			private readonly float _width;
 			private Vector2 _position;
-            		
+
 			public Popup(SerializedProperty property, float width)
 			{
 				_cacheEditor = Editor.CreateEditor(property.objectReferenceValue);
@@ -57,7 +57,7 @@ namespace Yorozu.CustomProperty
 					editorWindow.Close();
 				}
 			}
-			
+
 			public override Vector2 GetWindowSize()
 			{
 				// CustomEditorの高さが取得できないので固定

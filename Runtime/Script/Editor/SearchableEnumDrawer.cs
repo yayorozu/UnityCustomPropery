@@ -37,7 +37,7 @@ namespace Yorozu.CustomProperty
 			private readonly SearchField _searchField;
 			private readonly TreeView _treeView;
 			private readonly float _height;
-			
+
 			public Popup(SerializedProperty property)
 			{
 				_height = GetHeight();
